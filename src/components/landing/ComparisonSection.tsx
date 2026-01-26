@@ -16,7 +16,7 @@ const ComparisonSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Por Que Escolher <span className="text-gradient">Page Eventos</span>?
+            Por Que Escolher <span className="text-primary">Page Eventos</span>?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Enquanto grandes plataformas ignoram eventos regionais...
