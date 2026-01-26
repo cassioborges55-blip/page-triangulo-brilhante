@@ -1,31 +1,31 @@
-import { Phone, GraduationCap, Settings, PartyPopper } from "lucide-react";
+import { Headset, Rocket, Wrench, Sparkles, Clock } from "lucide-react";
 
 const steps = [
   {
     day: "Dia 1",
     title: "Reunião de Kickoff",
-    icon: Phone,
+    icon: Headset,
     description: "Entendemos seu evento, configuramos juntos",
     duration: "1h",
   },
   {
     day: "Dia 2-3",
     title: "Setup e Treinamento",
-    icon: GraduationCap,
+    icon: Rocket,
     description: "Tudo pronto, equipe treinada",
     duration: "2-3h",
   },
   {
     day: "Dia 4-7",
     title: "Testes",
-    icon: Settings,
+    icon: Wrench,
     description: "Você testa, ajustamos, garantimos perfeição",
     duration: "Suporte contínuo",
   },
   {
     day: "Evento",
     title: "Execução",
-    icon: PartyPopper,
+    icon: Sparkles,
     description: "Tudo funciona. Estamos lá se precisar",
     duration: "Evento completo",
   },
@@ -69,8 +69,8 @@ const HowItWorksSection = () => {
                 <p className="text-muted-foreground mb-3">{step.description}</p>
 
                 {/* Duration */}
-                <div className="inline-flex items-center gap-1 text-sm text-primary/80">
-                  <span>⏱️</span>
+                <div className="inline-flex items-center gap-2 text-sm text-primary/80">
+                  <Clock className="w-4 h-4" />
                   <span>{step.duration}</span>
                 </div>
 

@@ -1,26 +1,26 @@
-import { Smartphone, Zap, BarChart3, Users, Check } from "lucide-react";
+import { Globe, ScanQrCode, LineChart, HeartHandshake, Check } from "lucide-react";
 
 const solutions = [
   {
-    icon: Smartphone,
+    icon: Globe,
     title: "Venda Online 24/7",
     description: "Site profissional de vendas, Pix, cartão, boleto integrados",
     features: ["Venda a qualquer hora", "Sem comissão de terceiros", "Acompanhe em tempo real"],
   },
   {
-    icon: Zap,
+    icon: ScanQrCode,
     title: "Check-in Digital",
     description: "QR Code único por ingresso, validação instantânea",
     features: ["Filas 60% menores", "Zero fraude garantido", "Controle total de acesso"],
   },
   {
-    icon: BarChart3,
+    icon: LineChart,
     title: "Relatórios em Tempo Real",
     description: "Dashboard ao vivo com vendas, público e métricas",
     features: ["Vendas minuto a minuto", "Perfil do público", "Decisões baseadas em dados"],
   },
   {
-    icon: Users,
+    icon: HeartHandshake,
     title: "Suporte Personalizado",
     description: "Nossa equipe VAI AO SEU EVENTO se necessário",
     features: ["Suporte presencial", "WhatsApp direto", "Somos de Araxá"],
