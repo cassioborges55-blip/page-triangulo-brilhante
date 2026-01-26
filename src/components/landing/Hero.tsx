@@ -23,7 +23,7 @@ const Hero = () => {
           <div className="text-center lg:text-left animate-fade-up">
             {/* Badge */}
             <div className="inline-flex items-center gap-2 bg-foreground/10 backdrop-blur-sm border border-foreground/20 rounded-full px-4 py-2 mb-6">
-              <span className="text-lg">🎯</span>
+              <span className="text-lg">📍</span>
               <span className="text-foreground/90 text-sm font-medium">De Araxá para toda região</span>
             </div>
             

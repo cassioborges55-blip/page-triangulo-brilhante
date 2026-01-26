@@ -1,38 +1,38 @@
-import { Clock, BarChart3, DollarSign, FileText, ShoppingCart, XCircle } from "lucide-react";
+import { Timer, EyeOff, ShieldAlert, ClipboardList, TrendingDown, CircleSlash } from "lucide-react";
 
 const problems = [
   {
-    icon: Clock,
+    icon: Timer,
     title: "Filas Intermináveis",
     description: "Público irritado esperando 40+ minutos na entrada",
     badge: "8-12% desistências",
   },
   {
-    icon: BarChart3,
+    icon: EyeOff,
     title: "Zero Controle",
     description: "Você só sabe o resultado dias depois do evento",
     badge: "Decisões atrasadas",
   },
   {
-    icon: DollarSign,
+    icon: ShieldAlert,
     title: "Fraude Constante",
     description: "Ingressos falsificados causando prejuízo",
     badge: "R$ 2-5 mil perdidos",
   },
   {
-    icon: FileText,
+    icon: ClipboardList,
     title: "Trabalho Manual Excessivo",
     description: "Horas e horas em planilhas e controles",
     badge: "20+ horas desperdiçadas",
   },
   {
-    icon: ShoppingCart,
+    icon: TrendingDown,
     title: "Vendas Limitadas",
     description: "Depende de bilheteria física ou WhatsApp",
     badge: "30% menos vendas",
   },
   {
-    icon: XCircle,
+    icon: CircleSlash,
     title: "Reconciliação Caótica",
     description: "Dinheiro que não fecha, erros de caixa",
     badge: "Estresse constante",
