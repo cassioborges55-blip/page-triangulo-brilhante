@@ -1,5 +1,5 @@
 import logo from "@/assets/page-eventos-logo.png";
-import { Instagram, MessageCircle, Mail, MapPin } from "lucide-react";
+import { Instagram, MessageCircle, Mail, MapPin, Heart } from "lucide-react";
 
 const footerLinks = {
   about: [
@@ -91,8 +91,8 @@ const Footer = () => {
 
         {/* Bottom */}
         <div className="border-t border-border/30 pt-8 text-center">
-          <p className="text-muted-foreground">
-            © 2025 Page Eventos. Feito com 💚 em Araxá, Minas Gerais
+          <p className="text-muted-foreground inline-flex items-center gap-1 flex-wrap justify-center">
+            © 2025 Page Eventos. Feito com <Heart className="w-4 h-4 text-primary fill-primary" /> em Araxá, Minas Gerais
           </p>
         </div>
       </div>
