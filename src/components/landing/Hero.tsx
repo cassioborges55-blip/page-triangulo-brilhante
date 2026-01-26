@@ -35,7 +35,7 @@ const Hero = () => {
             {/* Headline */}
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-foreground leading-tight mb-6">
               A Plataforma de Eventos do{" "}
-              <span className="text-primary font-extrabold drop-shadow-[0_0_10px_hsl(152,100%,42%)]">Triângulo Mineiro</span>
+              <span className="text-gradient">Triângulo Mineiro</span>
             </h1>
             
             {/* Subheadline */}
