@@ -38,7 +38,7 @@ const HowItWorksSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Simples. Rápido. <span className="text-gradient">Sem Complicação.</span>
+            Simples. Rápido. <span className="text-primary">Sem Complicação.</span>
           </h2>
         </div>
 
