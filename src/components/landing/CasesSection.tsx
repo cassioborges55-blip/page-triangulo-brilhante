@@ -63,7 +63,7 @@ const CasesSection = () => {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 lg:p-8">
+                <div className="p-6 lg:p-8 flex flex-col justify-center">
                   <div className="flex flex-wrap items-center gap-3 mb-4">
                     {typeof caseItem.image === 'string' && caseItem.image.length <= 2 ? (
                       <span className="text-4xl md:hidden">{caseItem.image}</span>
