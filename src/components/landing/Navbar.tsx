@@ -7,7 +7,7 @@ const navLinks = [
   { label: "Soluções", href: "#solucoes" },
   { label: "Cases", href: "#cases" },
   { label: "Como Funciona", href: "#como-funciona" },
-  { label: "Preços", href: "#precos" },
+  
   { label: "Região", href: "#regiao" },
 ];
 
@@ -36,18 +36,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center gap-4">
-            <Button
-              variant="ghost"
-              className="text-foreground hover:text-primary"
-            >
-              Entrar
-            </Button>
-            <Button className="bg-primary text-primary-foreground hover:bg-primary/90 shadow-button btn-scale">
-              Criar Evento
-            </Button>
-          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -73,14 +61,6 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
-            <div className="pt-4 border-t border-border space-y-3">
-              <Button variant="ghost" className="w-full justify-start">
-                Entrar
-              </Button>
-              <Button className="w-full bg-primary text-primary-foreground">
-                Criar Evento
-              </Button>
-            </div>
           </div>
         </div>
       )}
