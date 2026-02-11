@@ -41,7 +41,7 @@ const CasesSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Eventos que <span className="text-primary">Confiaram em Nós</span>
+            Eventos que <span className="text-primary">confiaram em nós</span>
           </h2>
         </div>
 

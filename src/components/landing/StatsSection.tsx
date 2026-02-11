@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 
 const stats = [
-  { value: 150, suffix: "+", label: "Eventos Realizados" },
-  { value: 50000, suffix: "+", label: "Ingressos Vendidos" },
-  { value: 3858, suffix: "", label: "Seguidores Confiantes" },
-  { value: 100, suffix: "%", label: "Clientes Satisfeitos" },
+  { value: 150, suffix: "+", label: "Eventos realizados" },
+  { value: 50000, suffix: "+", label: "Ingressos vendidos" },
+  { value: 3858, suffix: "", label: "Seguidores confiantes" },
+  { value: 100, suffix: "%", label: "Clientes satisfeitos" },
 ];
 
 const AnimatedCounter = ({ target, suffix }: { target: number; suffix: string }) => {

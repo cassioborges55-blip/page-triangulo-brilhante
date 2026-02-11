@@ -54,7 +54,7 @@ const PricingSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Investimento Justo para <span className="text-primary">Seu Evento</span>
+            Investimento justo para <span className="text-primary">seu evento</span>
           </h2>
         </div>
 

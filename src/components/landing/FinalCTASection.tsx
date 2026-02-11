@@ -22,7 +22,7 @@ const FinalCTASection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Header */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-8 animate-fade-up">
-            Pronto para Transformar Seu Próximo Evento?
+            Pronto para transformar seu próximo evento?
           </h2>
 
           {/* Benefits */}
