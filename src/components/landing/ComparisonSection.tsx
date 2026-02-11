@@ -1,13 +1,13 @@
 import { Check, X, Handshake } from "lucide-react";
 
 const comparisons = [
-  { aspect: "Investimento", others: "R$ 30.000+", page: "R$ 500-8.000", pageIsGood: true },
-  { aspect: "Implementação", others: "2-6 meses", page: "3-7 dias", pageIsGood: true },
-  { aspect: "Suporte evento", others: "Remoto", page: "Presencial", othersIsBad: true, pageIsGood: true },
-  { aspect: "Conhece região", others: "Zero", page: "Profundo", othersIsBad: true, pageIsGood: true },
-  { aspect: "Flexibilidade", others: "Burocrático", page: "Total", othersIsBad: true, pageIsGood: true },
-  { aspect: "Contato", others: "Ticket", page: "WhatsApp", othersIsBad: true, pageIsGood: true },
-];
+{ aspect: "Investimento", others: "R$ 30.000+", page: "R$ 500-8.000", pageIsGood: true },
+{ aspect: "Implementação", others: "2-6 meses", page: "3-7 dias", pageIsGood: true },
+{ aspect: "Suporte evento", others: "Remoto", page: "Presencial", othersIsBad: true, pageIsGood: true },
+{ aspect: "Conhece região", others: "Zero", page: "Profundo", othersIsBad: true, pageIsGood: true },
+{ aspect: "Flexibilidade", others: "Burocrático", page: "Total", othersIsBad: true, pageIsGood: true },
+{ aspect: "Contato", others: "Ticket", page: "WhatsApp", othersIsBad: true, pageIsGood: true }];
+
 
 const ComparisonSection = () => {
   return (
@@ -34,11 +34,11 @@ const ComparisonSection = () => {
             </div>
 
             {/* Table Body */}
-            {comparisons.map((row, index) => (
-              <div
-                key={index}
-                className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-card' : 'bg-page-gray/50'} border-t border-border/50`}
-              >
+            {comparisons.map((row, index) =>
+            <div
+              key={index}
+              className={`grid grid-cols-3 ${index % 2 === 0 ? 'bg-card' : 'bg-page-gray/50'} border-t border-border/50`}>
+
                 <div className="p-4 md:p-6 font-medium text-foreground">{row.aspect}</div>
                 <div className="p-4 md:p-6 text-center flex items-center justify-center gap-2">
                   {row.othersIsBad && <X className="w-4 h-4 text-destructive shrink-0" />}
@@ -49,7 +49,7 @@ const ComparisonSection = () => {
                   <span className="text-primary font-medium text-sm md:text-base">{row.page}</span>
                 </div>
               </div>
-            ))}
+            )}
           </div>
         </div>
 
@@ -59,8 +59,8 @@ const ComparisonSection = () => {
             <div className="w-16 h-16 bg-primary-foreground/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Handshake className="w-8 h-8 text-primary-foreground" />
             </div>
-            <h3 className="text-2xl font-bold text-primary-foreground mb-4">
-              🤝 Nosso Diferencial Único
+            <h3 className="text-2xl font-bold text-primary-foreground mb-4"> Nosso Diferencial Único
+
             </h3>
             <p className="text-primary-foreground/90 text-lg max-w-2xl mx-auto">
               Somos de Araxá. Vamos ao seu evento. Respondemos seu WhatsApp em minutos. 
@@ -69,8 +69,8 @@ const ComparisonSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default ComparisonSection;
