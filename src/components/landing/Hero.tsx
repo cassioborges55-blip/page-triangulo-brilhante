@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, Play, MapPin } from "lucide-react";
+import { Calendar, MapPin } from "lucide-react";
 import logo from "@/assets/page-eventos-logo.png";
 import phoneScreen from "@/assets/phone-screen.png";
 
@@ -52,14 +52,6 @@ const Hero = () => {
               >
                 <Calendar className="mr-2 h-5 w-5" />
                 Agendar Demonstração
-              </Button>
-              <Button 
-                size="lg" 
-                variant="outline" 
-                className="border-2 border-foreground/50 text-foreground hover:bg-foreground/10 text-lg px-8 py-6 rounded-xl btn-scale"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Calcular Meu ROI
               </Button>
             </div>
           </div>
