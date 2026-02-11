@@ -69,7 +69,9 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <MessageCircle className="w-4 h-4 text-primary" />
-                <span>(34) XXXXX-XXXX</span>
+                <a href="https://wa.me/5534998093337" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  (34) 99809-3337
+                </a>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Mail className="w-4 h-4 text-primary" />
