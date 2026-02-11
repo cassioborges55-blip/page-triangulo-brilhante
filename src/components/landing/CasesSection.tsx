@@ -1,6 +1,6 @@
 import { Gem } from "lucide-react";
 import expoAgropecuaria from "@/assets/logo-exposicao.png";
-import copaMtbAraxa from "@/assets/copa-mtb-araxa.png";
+import copaMtbAraxa from "@/assets/copa-mtb-araxa-v2.png";
 
 import eventosLocais from "@/assets/logo-festa.png";
 
