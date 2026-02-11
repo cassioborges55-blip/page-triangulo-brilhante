@@ -1,4 +1,5 @@
 import { Gem } from "lucide-react";
+import expoAgropecuaria from "@/assets/expo-agropecuaria.png";
 
 const cases = [
   {
@@ -17,7 +18,7 @@ const cases = [
     solution: "Ingressos diferenciados + controle preciso",
     result: "Primeira vez com dados reais de público",
     highlight: "Controle preciso em tempo real",
-    image: "🌾",
+    image: expoAgropecuaria,
   },
   {
     title: "Eventos Locais Diversos",
@@ -52,13 +53,21 @@ const CasesSection = () => {
               <div className="grid md:grid-cols-[120px_1fr] lg:grid-cols-[180px_1fr] gap-0">
                 {/* Image placeholder */}
                 <div className="hidden md:flex bg-gradient-to-br from-primary/20 to-secondary/30 items-center justify-center p-8">
-                  <span className="text-6xl lg:text-8xl">{caseItem.image}</span>
+                  {typeof caseItem.image === 'string' && caseItem.image.length <= 2 ? (
+                    <span className="text-6xl lg:text-8xl">{caseItem.image}</span>
+                  ) : (
+                    <img src={caseItem.image} alt={caseItem.title} className="w-full h-full object-cover" />
+                  )}
                 </div>
 
                 {/* Content */}
                 <div className="p-6 lg:p-8">
                   <div className="flex flex-wrap items-center gap-3 mb-4">
-                    <span className="text-4xl md:hidden">{caseItem.image}</span>
+                    {typeof caseItem.image === 'string' && caseItem.image.length <= 2 ? (
+                      <span className="text-4xl md:hidden">{caseItem.image}</span>
+                    ) : (
+                      <img src={caseItem.image} alt={caseItem.title} className="w-16 h-16 rounded-lg object-cover md:hidden" />
+                    )}
                     <h3 className="text-xl lg:text-2xl font-bold text-foreground">{caseItem.title}</h3>
                     <span className="bg-primary/20 text-primary text-xs font-medium px-3 py-1 rounded-full">
                       {caseItem.badge}
