@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Play, MapPin } from "lucide-react";
 import logo from "@/assets/page-eventos-logo.png";
+import phoneScreen from "@/assets/phone-screen.png";
 
 const Hero = () => {
   return (
@@ -72,47 +73,8 @@ const Hero = () => {
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-page-black rounded-b-2xl z-10" />
                 
                 {/* Screen content */}
-                <div className="absolute inset-2 bg-gradient-to-b from-secondary to-page-black rounded-[2.5rem] overflow-hidden">
-                  {/* App header */}
-                  <div className="p-6 pt-10">
-                    <img src={logo} alt="Page Eventos" className="h-12 w-auto mx-auto mb-4" />
-                    <div className="text-center">
-                      <h3 className="text-foreground font-bold text-lg mb-1">Copa MTB Araxá</h3>
-                      <p className="text-foreground/60 text-sm">15 de Março, 2025</p>
-                    </div>
-                  </div>
-                  
-                  {/* Ticket preview */}
-                  <div className="mx-4 bg-card rounded-2xl p-4 shadow-card">
-                    <div className="flex justify-between items-center mb-3">
-                      <span className="text-foreground/60 text-xs">Ingresso VIP</span>
-                      <span className="text-primary font-bold">R$ 150</span>
-                    </div>
-                    <div className="w-full h-24 bg-page-gray-light rounded-lg flex items-center justify-center">
-                      <div className="w-20 h-20 bg-foreground rounded-lg" style={{
-                        backgroundImage: `repeating-linear-gradient(
-                          0deg,
-                          hsl(var(--page-black)),
-                          hsl(var(--page-black)) 4px,
-                          white 4px,
-                          white 8px
-                        )`
-                      }} />
-                    </div>
-                    <p className="text-center text-foreground/40 text-xs mt-2">QR Code válido</p>
-                  </div>
-                  
-                  {/* Stats */}
-                  <div className="grid grid-cols-2 gap-3 mx-4 mt-4">
-                    <div className="bg-primary/20 rounded-xl p-3 text-center">
-                      <p className="text-primary font-bold text-xl">5.2K</p>
-                      <p className="text-foreground/60 text-xs">Vendidos</p>
-                    </div>
-                    <div className="bg-primary/20 rounded-xl p-3 text-center">
-                      <p className="text-primary font-bold text-xl">98%</p>
-                      <p className="text-foreground/60 text-xs">Check-in</p>
-                    </div>
-                  </div>
+                <div className="absolute inset-2 rounded-[2.5rem] overflow-hidden">
+                  <img src={phoneScreen} alt="Page Eventos App" className="w-full h-full object-cover" />
                 </div>
               </div>
               
