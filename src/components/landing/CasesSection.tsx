@@ -1,6 +1,7 @@
 import { Gem } from "lucide-react";
 import expoAgropecuaria from "@/assets/expo-agropecuaria.png";
 import copaMtbAraxa from "@/assets/copa-mtb-araxa.png";
+import eventosLocais from "@/assets/eventos-locais.png";
 
 const cases = [
   {
@@ -28,7 +29,7 @@ const cases = [
     solution: "Venda online + check-in digital",
     result: "Filas -70%, vendas +25%",
     highlight: "Produtores tranquilos",
-    image: "🎉",
+    image: eventosLocais,
   },
 ];
 
