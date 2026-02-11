@@ -46,14 +46,6 @@ const FinalCTASection = () => {
               <Calendar className="mr-2 h-5 w-5" />
               Agendar Demonstração Gratuita
             </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-primary-foreground/50 text-primary-foreground hover:bg-primary-foreground/10 text-lg px-8 py-6 rounded-xl btn-scale"
-            >
-              <Calculator className="mr-2 h-5 w-5" />
-              Calcular Meu ROI
-            </Button>
           </div>
 
           {/* WhatsApp */}
