@@ -54,7 +54,7 @@ const CasesSection = () => {
             >
               <div className="grid md:grid-cols-[280px_1fr] lg:grid-cols-[360px_1fr] gap-0">
                 {/* Image placeholder */}
-                <div className="hidden md:flex items-center justify-center overflow-hidden h-[220px] lg:h-[260px]">
+                <div className="hidden md:flex items-center justify-center overflow-hidden">
                   {typeof caseItem.image === 'string' && caseItem.image.length <= 2 ? (
                     <span className="text-6xl lg:text-8xl">{caseItem.image}</span>
                   ) : (
