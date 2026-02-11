@@ -46,7 +46,7 @@ const ProblemsSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Você Reconhece Esses Problemas?
+            Você reconhece esses problemas?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Se você já passou por isso, não está sozinho...

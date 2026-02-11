@@ -22,7 +22,7 @@ const RegionSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Atendemos Todo o <span className="text-primary">Triângulo Mineiro</span>
+            Atendemos todo o <span className="text-primary">Triângulo Mineiro</span>
             <br />e <span className="text-primary">Alto Paranaíba</span>
           </h2>
         </div>

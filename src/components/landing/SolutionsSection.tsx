@@ -34,7 +34,7 @@ const SolutionsSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Page Eventos <span className="text-primary">Resolve Tudo Isso</span>
+            Page Eventos <span className="text-primary">resolve tudo isso</span>
           </h2>
         </div>
 

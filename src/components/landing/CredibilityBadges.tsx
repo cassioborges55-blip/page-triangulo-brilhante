@@ -8,9 +8,9 @@ interface Badge {
 
 const badges: Badge[] = [
   { icon: Trophy, text: "Copa MTB Araxá" },
-  { icon: BarChart3, text: "150+ Eventos Realizados" },
-  { icon: Ticket, text: "50.000+ Ingressos Vendidos" },
-  { icon: Heart, text: "100% Suporte Local" },
+  { icon: BarChart3, text: "150+ eventos realizados" },
+  { icon: Ticket, text: "50.000+ ingressos vendidos" },
+  { icon: Heart, text: "100% suporte local" },
 ];
 
 const CredibilityBadges = () => {

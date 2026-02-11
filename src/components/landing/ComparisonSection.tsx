@@ -16,7 +16,7 @@ const ComparisonSection = () => {
         {/* Header */}
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
-            Por Que Escolher <span className="text-primary">Page Eventos</span>?
+            Por que escolher <span className="text-primary">Page Eventos</span>?
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Enquanto grandes plataformas ignoram eventos regionais...
@@ -29,7 +29,7 @@ const ComparisonSection = () => {
             {/* Table Header */}
             <div className="grid grid-cols-3 bg-page-gray">
               <div className="p-4 md:p-6 font-bold text-foreground">Aspecto</div>
-              <div className="p-4 md:p-6 font-bold text-muted-foreground text-center">Grandes Plataformas</div>
+              <div className="p-4 md:p-6 font-bold text-muted-foreground text-center">Grandes plataformas</div>
               <div className="p-4 md:p-6 font-bold text-primary text-center">Page Eventos</div>
             </div>
 
@@ -59,9 +59,7 @@ const ComparisonSection = () => {
             <div className="w-16 h-16 bg-primary-foreground/20 rounded-full flex items-center justify-center mx-auto mb-4">
               <Handshake className="w-8 h-8 text-primary-foreground" />
             </div>
-            <h3 className="text-2xl font-bold text-primary-foreground mb-4"> Nosso Diferencial Único
-
-            </h3>
+            <h3 className="text-2xl font-bold text-primary-foreground mb-4">Nosso diferencial único</h3>
             <p className="text-primary-foreground/90 text-lg max-w-2xl mx-auto">
               Somos de Araxá. Vamos ao seu evento. Respondemos seu WhatsApp em minutos. 
               Somos seu parceiro, não um fornecedor distante.
