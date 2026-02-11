@@ -51,7 +51,7 @@ const CasesSection = () => {
               className="group bg-card border border-border rounded-2xl overflow-hidden card-hover animate-fade-up"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="grid md:grid-cols-[120px_1fr] lg:grid-cols-[180px_1fr] gap-0">
+              <div className="grid md:grid-cols-[280px_1fr] lg:grid-cols-[360px_1fr] gap-0">
                 {/* Image placeholder */}
                 <div className="hidden md:flex items-center justify-center overflow-hidden">
                   {typeof caseItem.image === 'string' && caseItem.image.length <= 2 ? (
