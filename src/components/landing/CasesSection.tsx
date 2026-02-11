@@ -1,6 +1,7 @@
 import { Gem } from "lucide-react";
-import expoAgropecuaria from "@/assets/expo-agropecuaria.png";
+import expoAgropecuaria from "@/assets/logo-exposicao.png";
 import copaMtbAraxa from "@/assets/copa-mtb-araxa.png";
+
 import eventosLocais from "@/assets/logo-festa.png";
 
 const cases = [
