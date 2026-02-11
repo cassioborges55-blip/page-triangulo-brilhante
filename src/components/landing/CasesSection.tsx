@@ -1,5 +1,6 @@
 import { Gem } from "lucide-react";
 import expoAgropecuaria from "@/assets/expo-agropecuaria.png";
+import copaMtbAraxa from "@/assets/copa-mtb-araxa.png";
 
 const cases = [
   {
@@ -9,7 +10,7 @@ const cases = [
     solution: "Check-in por categorias + sistema integrado",
     result: "Zero filas, controle total",
     highlight: "Gerenciamos até o estacionamento!",
-    image: "🚴",
+    image: copaMtbAraxa,
   },
   {
     title: "Exposição Agropecuária",
