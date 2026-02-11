@@ -41,27 +41,24 @@ const FinalCTASection = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8 animate-fade-up" style={{ animationDelay: '0.2s' }}>
             <Button
               size="lg"
+              asChild
               className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-8 py-6 rounded-xl shadow-lg btn-scale"
             >
-              <Calendar className="mr-2 h-5 w-5" />
-              Agendar Demonstração Gratuita
+              <a href="https://pageeventos.com.br/" target="_blank" rel="noopener noreferrer">
+                <Calendar className="mr-2 h-5 w-5" />
+                Crie seu evento agora
+              </a>
             </Button>
-          </div>
-
-          {/* WhatsApp */}
-          <div className="animate-fade-up" style={{ animationDelay: '0.3s' }}>
-            <div className="flex items-center justify-center gap-2 text-primary-foreground/80 mb-2">
-              <MessageCircle className="w-5 h-5" />
-              <span>Ou fale direto no WhatsApp: (34) 99999-9999</span>
-            </div>
-            <a
-              href="https://linktr.ee/pageapp"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary-foreground underline hover:text-primary-foreground/80 transition-colors"
+            <Button
+              size="lg"
+              asChild
+              className="bg-[#25D366] text-white hover:bg-[#20BD5A] text-lg px-8 py-6 rounded-xl shadow-lg btn-scale"
             >
-              linktr.ee/pageapp
-            </a>
+              <a href="https://wa.me/5534998093337" target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="mr-2 h-5 w-5" />
+                Agendar Demonstração Gratuita
+              </a>
+            </Button>
           </div>
         </div>
       </div>

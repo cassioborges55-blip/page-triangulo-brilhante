@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, MessageCircle } from "lucide-react";
 import logo from "@/assets/page-eventos-logo.png";
 import phoneScreen from "@/assets/phone-screen.png";
 
@@ -48,10 +48,23 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button
                 size="lg"
-                className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-xl shadow-button btn-scale animate-pulse-soft">
-
-                <Calendar className="mr-2 h-5 w-5" />
-                Agendar Demonstração
+                asChild
+                className="bg-card text-foreground hover:bg-card/90 text-lg px-8 py-6 rounded-xl shadow-button btn-scale"
+              >
+                <a href="https://pageeventos.com.br/" target="_blank" rel="noopener noreferrer">
+                  <Calendar className="mr-2 h-5 w-5" />
+                  Crie seu evento agora
+                </a>
+              </Button>
+              <Button
+                size="lg"
+                asChild
+                className="bg-[#25D366] text-white hover:bg-[#20BD5A] text-lg px-8 py-6 rounded-xl shadow-button btn-scale animate-pulse-soft"
+              >
+                <a href="https://wa.me/5534998093337" target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 h-5 w-5" />
+                  Agendar Demonstração
+                </a>
               </Button>
             </div>
           </div>
