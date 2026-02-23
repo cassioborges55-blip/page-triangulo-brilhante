@@ -1,11 +1,11 @@
-import { Globe, ScanQrCode, LineChart, HeartHandshake, Check } from "lucide-react";
+import { Banknote, ScanQrCode, LineChart, HeartHandshake, Check } from "lucide-react";
 
 const solutions = [
   {
-    icon: Globe,
-    title: "Venda Online 24/7",
-    description: "Site profissional de vendas, Pix, cartão, boleto integrados",
-    features: ["Venda a qualquer hora", "Sem comissão de terceiros", "Acompanhe em tempo real"],
+    icon: Banknote,
+    title: "Split de receita e antecipação",
+    description: "Divisão automática entre organizador, fornecedor e plataforma com otimização fiscal",
+    features: ["Split automático entre as partes", "Otimização de impostos integrada", "PIX e débito: resgate na hora", "Crédito: 50% antecipado, restante D+2"],
   },
   {
     icon: ScanQrCode,
