@@ -2,7 +2,7 @@ import { Check, X, Handshake } from "lucide-react";
 
 const comparisons = [
 { aspect: "Investimento", others: "R$ 30.000+", page: "R$ 500-8.000", pageIsGood: true },
-{ aspect: "Implementação", others: "2-6 meses", page: "3-7 dias", pageIsGood: true },
+{ aspect: "Implementação", others: "1-5 dias", page: "1-2 dias", pageIsGood: true },
 { aspect: "Suporte evento", others: "Remoto", page: "Presencial", othersIsBad: true, pageIsGood: true },
 { aspect: "Conhece região", others: "Zero", page: "Profundo", othersIsBad: true, pageIsGood: true },
 { aspect: "Flexibilidade", others: "Burocrático", page: "Total", othersIsBad: true, pageIsGood: true },
