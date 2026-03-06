@@ -3,18 +3,18 @@ import { useState } from "react";
 
 const selfServiceSteps = [
   {
-    day: "Hora 1",
+    day: "Passo 1",
     title: "Cadastro e Configuração",
     icon: Upload,
     description: "Crie sua conta, cadastre seu evento e configure ingressos",
-    duration: "~30min",
+    duration: "~10min",
   },
   {
-    day: "Hora 2-3",
+    day: "Passo 2",
     title: "Personalização e Testes",
     icon: Settings,
     description: "Personalize sua página, teste o checkout e publique",
-    duration: "~1-2h",
+    duration: "~10min",
   },
   {
     day: "Evento",
@@ -95,7 +95,7 @@ const HowItWorksSection = () => {
         {/* Subtitle */}
         <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto animate-fade-up">
           {activeTab === "self"
-            ? "Em 30 minutos seu evento está online vendendo ingressos."
+            ? "Em poucos minutos seu evento está online vendendo ingressos."
             : "Reunimos presencialmente com você para garantir tudo perfeito."}
         </p>
 
