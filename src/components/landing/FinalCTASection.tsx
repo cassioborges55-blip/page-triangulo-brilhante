@@ -5,8 +5,8 @@ const benefits = [
   "Zero estresse operacional",
   "Público satisfeito (sem filas!)",
   "Dados reais para decisões",
-  "ROI de 100-200% comprovado",
-  "Somos de Araxá, como você",
+  "Filas -70% nos eventos com Page",
+  "Equipe local no Triângulo Mineiro e Alto Paranaíba",
 ];
 
 const FinalCTASection = () => {

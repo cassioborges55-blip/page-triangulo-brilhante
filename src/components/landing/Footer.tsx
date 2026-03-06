@@ -79,7 +79,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span>Araxá - MG</span>
+                <span>Araxá - MG | Uberaba - MG</span>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Instagram className="w-4 h-4 text-primary" />

@@ -27,6 +27,7 @@ const Index = () => {
         <StatsSection />
         
         <RegionSection />
+        <ContactFormSection />
         <FinalCTASection />
       </main>
       <Footer />

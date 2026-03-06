@@ -2,8 +2,8 @@ import { MapPin } from "lucide-react";
 
 const cities = [
   { name: "Araxá", main: true },
+  { name: "Uberaba", main: true },
   { name: "Patos de Minas", main: false },
-  { name: "Uberaba", main: false },
   { name: "Patrocínio", main: false },
   { name: "Uberlândia", main: false },
 ];
@@ -60,8 +60,15 @@ const RegionSection = () => {
 
               {/* Uberaba - bottom center */}
               <div className="absolute bottom-1/4 left-1/2 -translate-x-1/2">
-                <div className="w-4 h-4 bg-primary/60 rounded-full" />
-                <span className="absolute -top-6 left-1/2 -translate-x-1/2 text-foreground/70 text-xs whitespace-nowrap">Uberaba</span>
+                <div className="relative">
+                  <div className="w-6 h-6 bg-primary rounded-full animate-pulse-soft shadow-button" />
+                  <div className="absolute -top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-primary text-primary-foreground text-xs font-bold px-2 py-1 rounded-full">
+                    Uberaba
+                  </div>
+                  <div className="absolute top-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-primary/20 text-primary text-xs font-bold px-2 py-1 rounded-full border border-primary/30">
+                    NOVO: equipe local
+                  </div>
+                </div>
               </div>
 
               {/* Patrocínio - top center */}
@@ -98,7 +105,7 @@ const RegionSection = () => {
 
         {/* Text */}
         <p className="text-center text-muted-foreground text-lg max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: '0.4s' }}>
-          Somos locais. Conhecemos cada cidade. Falamos presencialmente no seu evento.
+          Somos locais. Conhecemos cada cidade. Agora com equipe em Uberaba e presença presencial no seu evento.
         </p>
       </div>
     </section>
