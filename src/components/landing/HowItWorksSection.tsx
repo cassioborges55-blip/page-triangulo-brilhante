@@ -31,7 +31,7 @@ const premiumSteps = [
     title: "Reunião de Kickoff e Treinamento",
     icon: Headset,
     description: "Entendemos seu evento, configuramos e treinamos sua equipe juntos",
-    duration: "2-3h",
+    duration: "~1h",
   },
   {
     day: "Dia 2",
