@@ -95,7 +95,7 @@ const HowItWorksSection = () => {
         {/* Subtitle */}
         <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto animate-fade-up">
           {activeTab === "self"
-            ? "Em 30 minutos seu evento está online vendendo ingressos."
+            ? "Em poucos minutos seu evento está online vendendo ingressos."
             : "Reunimos presencialmente com você para garantir tudo perfeito."}
         </p>
 
