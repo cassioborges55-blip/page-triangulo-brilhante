@@ -105,7 +105,7 @@ const RegionSection = () => {
 
         {/* Text */}
         <p className="text-center text-muted-foreground text-lg max-w-2xl mx-auto animate-fade-up" style={{ animationDelay: '0.4s' }}>
-          Somos locais. Conhecemos cada cidade. Agora com equipe em Uberaba e presença presencial no seu evento.
+          Somos locais. Conhecemos cada cidade. Agora com equipe fixa em Uberaba e suporte presencial no seu evento.
         </p>
       </div>
     </section>
