@@ -3,18 +3,18 @@ import { useState } from "react";
 
 const selfServiceSteps = [
   {
-    day: "Hora 1",
+    day: "Passo 1",
     title: "Cadastro e Configuração",
     icon: Upload,
     description: "Crie sua conta, cadastre seu evento e configure ingressos",
-    duration: "~30min",
+    duration: "~10min",
   },
   {
-    day: "Hora 2-3",
+    day: "Passo 2",
     title: "Personalização e Testes",
     icon: Settings,
     description: "Personalize sua página, teste o checkout e publique",
-    duration: "~1-2h",
+    duration: "~10min",
   },
   {
     day: "Evento",
