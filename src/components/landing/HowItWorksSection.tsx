@@ -31,7 +31,7 @@ const premiumSteps = [
     title: "Reunião de Kickoff e Treinamento",
     icon: Headset,
     description: "Entendemos seu evento, configuramos e treinamos sua equipe juntos",
-    duration: "2-3h",
+    duration: "~1h",
   },
   {
     day: "Dia 2",
@@ -95,7 +95,7 @@ const HowItWorksSection = () => {
         {/* Subtitle */}
         <p className="text-center text-muted-foreground mb-12 max-w-xl mx-auto animate-fade-up">
           {activeTab === "self"
-            ? "Em poucas horas você sobe seu evento sozinho na plataforma."
+            ? "Em 30 minutos seu evento está online vendendo ingressos."
             : "Reunimos presencialmente com você para garantir tudo perfeito."}
         </p>
 

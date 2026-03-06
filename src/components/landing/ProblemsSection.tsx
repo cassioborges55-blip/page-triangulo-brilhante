@@ -80,6 +80,14 @@ const ProblemsSection = () => {
             </div>
           ))}
         </div>
+
+        {/* Micro-CTA */}
+        <div className="mt-10 text-center animate-fade-up" style={{ animationDelay: '0.6s' }}>
+          <p className="text-muted-foreground text-lg">
+            Se marcou 3 ou mais, a Page foi feita para você{" "}
+            <span className="text-primary text-2xl font-bold">↓</span>
+          </p>
+        </div>
       </div>
     </section>
   );

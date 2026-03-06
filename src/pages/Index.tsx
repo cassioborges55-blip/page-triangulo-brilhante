@@ -7,8 +7,8 @@ import ComparisonSection from "@/components/landing/ComparisonSection";
 import CasesSection from "@/components/landing/CasesSection";
 import HowItWorksSection from "@/components/landing/HowItWorksSection";
 import StatsSection from "@/components/landing/StatsSection";
-
 import RegionSection from "@/components/landing/RegionSection";
+import ContactFormSection from "@/components/landing/ContactFormSection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
 import Footer from "@/components/landing/Footer";
 
@@ -27,6 +27,7 @@ const Index = () => {
         <StatsSection />
         
         <RegionSection />
+        <ContactFormSection />
         <FinalCTASection />
       </main>
       <Footer />

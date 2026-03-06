@@ -25,7 +25,7 @@ const Footer = () => {
           <div>
             <img src={logo} alt="Page Eventos" className="h-16 w-auto mb-4" />
             <p className="text-muted-foreground">
-              A plataforma que movimenta os eventos de Araxá e região
+              A plataforma que movimenta os eventos do Triângulo Mineiro e Alto Paranaíba
             </p>
           </div>
 
@@ -79,7 +79,7 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <MapPin className="w-4 h-4 text-primary" />
-                <span>Araxá - MG</span>
+                <span>Araxá - MG | Uberaba - MG</span>
               </li>
               <li className="flex items-center gap-2 text-muted-foreground">
                 <Instagram className="w-4 h-4 text-primary" />

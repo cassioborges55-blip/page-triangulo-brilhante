@@ -1,4 +1,4 @@
-import { Banknote, ScanQrCode, LineChart, HeartHandshake, Check } from "lucide-react";
+import { Banknote, ScanQrCode, LineChart, HeartHandshake, Car, UtensilsCrossed, Check } from "lucide-react";
 
 const solutions = [
   {
@@ -22,8 +22,20 @@ const solutions = [
   {
     icon: HeartHandshake,
     title: "Suporte Personalizado",
-    description: "Nossa equipe VAI AO SEU EVENTO se necessário",
+    description: "Nossa equipe VAI AO SEU EVENTO. Sempre que precisar, estamos lá.",
     features: ["Suporte presencial", "WhatsApp direto", "Somos de Araxá"],
+  },
+  {
+    icon: Car,
+    title: "Gestão de Estacionamento",
+    description: "Controle integrado de vagas e check-in de veículos",
+    features: ["Controle de vagas em tempo real", "Check-in de veículos por QR Code", "Receita adicional com estacionamento"],
+  },
+  {
+    icon: UtensilsCrossed,
+    title: "Módulo F&B (praça de alimentação)",
+    description: "Venda antecipada de comida e bebida com controle por pulseira",
+    features: ["Venda de consumações antes do evento", "Controle de consumo por pulseira digital", "Reduz desperdício em 15-20%"],
   },
 ];
 
@@ -39,7 +51,7 @@ const SolutionsSection = () => {
         </div>
 
         {/* Solutions Grid */}
-        <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {solutions.map((solution, index) => (
             <div
               key={index}
