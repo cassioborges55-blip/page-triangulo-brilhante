@@ -3,8 +3,9 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { MessageCircle } from "lucide-react";
-
+import { MessageCircle, Loader2 } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 const eventTypes = [
   "Show/Festa",
   "Evento Esportivo",
@@ -26,6 +27,7 @@ const ContactFormSection = () => {
   const [whatsapp, setWhatsapp] = useState("");
   const [eventType, setEventType] = useState("");
   const [audience, setAudience] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const formatPhone = (value: string) => {
     const digits = value.replace(/\D/g, "").slice(0, 11);
@@ -38,13 +40,35 @@ const ContactFormSection = () => {
     setWhatsapp(formatPhone(e.target.value));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Novo lead - Page Eventos");
-    const body = encodeURIComponent(
-      `Nome: ${name}\nWhatsApp: ${whatsapp}\nTipo de evento: ${eventType}\nPúblico estimado: ${audience}`
-    );
-    window.location.href = `mailto:contato@pageeventos.com.br?subject=${subject}&body=${body}`;
+    setLoading(true);
+
+    try {
+      const { error } = await supabase.from("leads").insert({
+        name: name.trim(),
+        whatsapp: whatsapp.trim(),
+        event_type: eventType,
+        audience,
+      });
+
+      if (error) throw error;
+
+      const message = encodeURIComponent(
+        `Olá! Sou ${name.trim()}.\nTipo de evento: ${eventType}\nPúblico estimado: ${audience}\nMeu WhatsApp: ${whatsapp}`
+      );
+      window.open(`https://wa.me/5534998093337?text=${message}`, "_blank");
+
+      toast({ title: "Enviado com sucesso!", description: "Entraremos em contato em breve." });
+      setName("");
+      setWhatsapp("");
+      setEventType("");
+      setAudience("");
+    } catch {
+      toast({ title: "Erro ao enviar", description: "Tente novamente.", variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -116,10 +140,11 @@ const ContactFormSection = () => {
             <Button
               type="submit"
               size="lg"
+              disabled={loading}
               className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6 rounded-xl shadow-button btn-scale"
             >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Quero conhecer a Page
+              {loading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : <MessageCircle className="mr-2 h-5 w-5" />}
+              {loading ? "Enviando..." : "Quero conhecer a Page"}
             </Button>
 
             <p className="text-center text-muted-foreground text-sm">
