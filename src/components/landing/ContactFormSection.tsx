@@ -67,8 +67,6 @@ const ContactFormSection = () => {
     setAudience("");
     setLoading(false);
   };
-    }
-  };
 
   return (
     <section id="contato" className="section-padding bg-page-gray">
