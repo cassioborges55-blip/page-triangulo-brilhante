@@ -140,10 +140,11 @@ const ContactFormSection = () => {
             <Button
               type="submit"
               size="lg"
+              disabled={loading}
               className="w-full bg-primary text-primary-foreground hover:bg-primary/90 text-lg py-6 rounded-xl shadow-button btn-scale"
             >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              Quero conhecer a Page
+              {loading ? <Loader2 className="mr-2 h-5 w-5 animate-spin" /> : <MessageCircle className="mr-2 h-5 w-5" />}
+              {loading ? "Enviando..." : "Quero conhecer a Page"}
             </Button>
 
             <p className="text-center text-muted-foreground text-sm">
