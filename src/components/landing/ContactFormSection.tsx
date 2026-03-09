@@ -44,30 +44,29 @@ const ContactFormSection = () => {
     e.preventDefault();
     setLoading(true);
 
-    try {
-      const { error } = await supabase.from("leads").insert({
-        name: name.trim(),
-        whatsapp: whatsapp.trim(),
-        event_type: eventType,
-        audience,
-      });
+    // Save lead (fire-and-forget, don't block WhatsApp)
+    supabase.from("leads").insert({
+      name: name.trim(),
+      whatsapp: whatsapp.trim(),
+      event_type: eventType,
+      audience,
+    }).then(({ error }) => {
+      if (error) console.error("Erro ao salvar lead:", error);
+    });
 
-      if (error) throw error;
+    // Always open WhatsApp
+    const message = encodeURIComponent(
+      `Olá! Sou ${name.trim()}.\nTipo de evento: ${eventType}\nPúblico estimado: ${audience}\nMeu WhatsApp: ${whatsapp}`
+    );
+    window.open(`https://wa.me/5534998093337?text=${message}`, "_blank");
 
-      const message = encodeURIComponent(
-        `Olá! Sou ${name.trim()}.\nTipo de evento: ${eventType}\nPúblico estimado: ${audience}\nMeu WhatsApp: ${whatsapp}`
-      );
-      window.open(`https://wa.me/5534998093337?text=${message}`, "_blank");
-
-      toast({ title: "Enviado com sucesso!", description: "Entraremos em contato em breve." });
-      setName("");
-      setWhatsapp("");
-      setEventType("");
-      setAudience("");
-    } catch {
-      toast({ title: "Erro ao enviar", description: "Tente novamente.", variant: "destructive" });
-    } finally {
-      setLoading(false);
+    toast({ title: "Enviado com sucesso!", description: "Entraremos em contato em breve." });
+    setName("");
+    setWhatsapp("");
+    setEventType("");
+    setAudience("");
+    setLoading(false);
+  };
     }
   };
 
