@@ -27,6 +27,7 @@ const ContactFormSection = () => {
   const [whatsapp, setWhatsapp] = useState("");
   const [eventType, setEventType] = useState("");
   const [audience, setAudience] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const formatPhone = (value: string) => {
     const digits = value.replace(/\D/g, "").slice(0, 11);
@@ -39,13 +40,35 @@ const ContactFormSection = () => {
     setWhatsapp(formatPhone(e.target.value));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const subject = encodeURIComponent("Novo lead - Page Eventos");
-    const body = encodeURIComponent(
-      `Nome: ${name}\nWhatsApp: ${whatsapp}\nTipo de evento: ${eventType}\nPúblico estimado: ${audience}`
-    );
-    window.location.href = `mailto:contato@pageeventos.com.br?subject=${subject}&body=${body}`;
+    setLoading(true);
+
+    try {
+      const { error } = await supabase.from("leads").insert({
+        name: name.trim(),
+        whatsapp: whatsapp.trim(),
+        event_type: eventType,
+        audience,
+      });
+
+      if (error) throw error;
+
+      const message = encodeURIComponent(
+        `Olá! Sou ${name.trim()}.\nTipo de evento: ${eventType}\nPúblico estimado: ${audience}\nMeu WhatsApp: ${whatsapp}`
+      );
+      window.open(`https://wa.me/5534998093337?text=${message}`, "_blank");
+
+      toast({ title: "Enviado com sucesso!", description: "Entraremos em contato em breve." });
+      setName("");
+      setWhatsapp("");
+      setEventType("");
+      setAudience("");
+    } catch {
+      toast({ title: "Erro ao enviar", description: "Tente novamente.", variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
