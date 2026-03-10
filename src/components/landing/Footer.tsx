@@ -1,4 +1,4 @@
-import logo from "@/assets/logo-page-branco.png";
+import logo from "@/assets/Logo_PAGE_Eventos_branco-2.png";
 import { Instagram, MessageCircle, Mail, MapPin, Heart } from "lucide-react";
 
 const footerLinks = {
@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <img src={logo} alt="Page Eventos" className="h-[60px] w-auto mb-4" />
+            <img src={logo} alt="Page Eventos" className="h-[64px] w-auto mb-4" />
             <p className="text-muted-foreground">
               A plataforma que movimenta os eventos do Triângulo Mineiro e Alto Paranaíba
             </p>
