@@ -17,10 +17,10 @@ const Navbar = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border/50">
       <div className="container-custom">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-24 md:h-32">
           {/* Logo */}
           <a href="#" className="flex items-center">
-            <img src={logo} alt="Page Eventos" className="h-[51px] md:h-[64px] w-auto" />
+            <img src={logo} alt="Page Eventos" className="h-[80px] md:h-[100px] w-auto" />
           </a>
 
           {/* Desktop Navigation */}
