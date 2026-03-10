@@ -1,4 +1,4 @@
-import logo from "@/assets/logo-page-branco.png";
+import logo from "@/assets/Logo_PAGE_Eventos_branco-2.png";
 import { Instagram, MessageCircle, Mail, MapPin, Heart } from "lucide-react";
 
 const footerLinks = {
