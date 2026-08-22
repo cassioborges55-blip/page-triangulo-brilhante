@@ -154,6 +154,17 @@ const ContactFormSection = () => {
             <p className="text-center text-muted-foreground text-sm">
               Sem compromisso. Sem spam.
             </p>
+            <p className="text-center text-muted-foreground/70 text-xs">
+              Ao enviar você concorda com a nossa{" "}
+              <a
+                href="https://pageeventos.com.br/docs/politica-de-privacidade.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-primary transition-colors"
+              >
+                Política de Privacidade
+              </a>
+            </p>
           </form>
         </div>
       </div>
