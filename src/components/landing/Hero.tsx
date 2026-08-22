@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, MessageCircle } from "lucide-react";
 import logo from "@/assets/page-eventos-logo.png";
 import phoneScreen from "@/assets/phone-screen.png";
+import { trackWhatsappClick } from "@/lib/tracking";
 
 const Hero = () => {
   return (
