@@ -6,7 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { MessageCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
-import { trackLeadSubmit, trackWhatsappClick } from "@/lib/tracking";
+import { trackLeadSubmit, trackWhatsappClick, buildWhatsappUrl, WHATSAPP_BASE_MESSAGE } from "@/lib/tracking";
 const eventTypes = [
   "Show/Festa",
   "Evento Esportivo",
@@ -62,10 +62,10 @@ const ContactFormSection = () => {
 
     // Always open WhatsApp
     trackWhatsappClick("formulario");
-    const message = encodeURIComponent(
-      `Olá! Sou ${name.trim()}.\nTipo de evento: ${eventType}\nPúblico estimado: ${audience}\nMeu WhatsApp: ${whatsapp}`
+    const url = buildWhatsappUrl(
+      `${WHATSAPP_BASE_MESSAGE}\nNome: ${name.trim()}\nTipo de evento: ${eventType}\nPúblico estimado: ${audience}\nMeu WhatsApp: ${whatsapp}`
     );
-    window.open(`https://wa.me/5534998093337?text=${message}`, "_blank");
+    window.open(url, "_blank");
 
     toast({ title: "Enviado com sucesso!", description: "Entraremos em contato em breve." });
     setName("");
