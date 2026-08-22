@@ -70,7 +70,7 @@ const Hero = () => {
                 asChild
                 className="bg-[#25D366] text-white hover:bg-[#20BD5A] text-lg px-8 py-6 rounded-xl shadow-button btn-scale animate-pulse-soft"
               >
-                <a href="https://wa.me/5534998093337" target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsappClick("hero")}>
+                <a href={buildWhatsappUrl()} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsappClick("hero")}>
                   <MessageCircle className="mr-2 h-5 w-5" />
                   Agendar Demonstração
                 </a>
