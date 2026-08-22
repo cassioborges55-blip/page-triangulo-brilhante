@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <script type="module">import { injectIntoGlobalHook } from "/@react-refresh";
+injectIntoGlobalHook(window);
+window.$RefreshReg$ = () => {};
+window.$RefreshSig$ = () => (type) => type;</script>
+
+    <script type="module" src="/@vite/client"></script>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start': new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0], j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-WDHB8TCL');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PAGE Eventos | Ingresso, estacionamento e consumo num sistema só.</title>
+    <meta name="description" content="Tecnologia para eventos com check-in em 2 segundos, controle de estacionamento, entrada e consumo num sistema só. Suporte presencial e preço justo, de Araxá para toda a região." />
+    <meta name="author" content="Grupo PAGE" />
+
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#00D672" />
+
+    <meta property="og:title" content="PAGE Eventos | Ingresso, estacionamento e consumo num sistema só." />
+    <meta property="og:description" content="Tecnologia para eventos com check-in em 2 segundos, controle de estacionamento, entrada e consumo num sistema só. Suporte presencial e preço justo, de Araxá para toda a região." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lp.pageeventos.com.br/" />
+    <meta property="og:site_name" content="PAGE Eventos" />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:image" content="https://lp.pageeventos.com.br/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="PAGE Eventos" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PAGE Eventos | Ingresso, estacionamento e consumo num sistema só." />
+    <meta name="twitter:description" content="Tecnologia para eventos com check-in em 2 segundos, controle de estacionamento, entrada e consumo num sistema só. Suporte presencial e preço justo, de Araxá para toda a região." />
+    <meta name="twitter:image" content="https://lp.pageeventos.com.br/og-image.png" />
+  </head>
+
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WDHB8TCL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx?t=1787401814928"></script>
+  </body>
+</html>
