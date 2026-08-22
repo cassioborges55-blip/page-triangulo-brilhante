@@ -55,7 +55,7 @@ const FinalCTASection = () => {
               asChild
               className="bg-[#25D366] text-white hover:bg-[#20BD5A] text-lg px-8 py-6 rounded-xl shadow-lg btn-scale"
             >
-              <a href="https://wa.me/5534998093337" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/5534998093337" target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsappClick("final_cta")}>
                 <MessageCircle className="mr-2 h-5 w-5" />
                 Agendar Demonstração Gratuita
               </a>
