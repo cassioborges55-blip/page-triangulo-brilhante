@@ -61,7 +61,7 @@ const FinalCTASection = () => {
             <Button
               size="lg"
               asChild
-              className="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6 rounded-xl shadow-lg btn-scale"
+              className="bg-transparent border-2 border-primary text-white hover:bg-primary/10 text-lg px-8 py-6 rounded-xl btn-scale"
             >
               <a href={buildWhatsappUrl()} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsappClick("final_cta")}>
                 <MessageCircle className="mr-2 h-5 w-5" />
