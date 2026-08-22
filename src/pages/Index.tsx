@@ -21,6 +21,7 @@ const Index = () => {
       <main>
         <Hero />
         <CredibilityBadges />
+        <EventLogosSection />
         <ProblemsSection />
         <SolutionsSection />
         <ComparisonSection />
