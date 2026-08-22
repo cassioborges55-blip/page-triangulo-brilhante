@@ -1,5 +1,6 @@
 import logo from "@/assets/Logo_PAGE_Eventos_branca_v4.png";
 import { Instagram, MessageCircle, Mail, MapPin, Heart } from "lucide-react";
+import { trackWhatsappClick } from "@/lib/tracking";
 
 const footerLinks = {
   about: [
