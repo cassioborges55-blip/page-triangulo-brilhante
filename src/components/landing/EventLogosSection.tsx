@@ -1,22 +1,23 @@
-import evento1 from "@/assets/evento1.png.asset.json";
-import evento2 from "@/assets/evento2.png.asset.json";
-import evento3 from "@/assets/evento3.png.asset.json";
-import evento4 from "@/assets/evento4.png.asset.json";
-import evento5 from "@/assets/evento5.png.asset.json";
-import evento6 from "@/assets/evento6.png.asset.json";
-import evento7 from "@/assets/evento7.png.asset.json";
-import evento8 from "@/assets/evento8.png.asset.json";
+import evento1 from "@/assets/evento1.png";
+import evento2 from "@/assets/evento2.png";
+import evento3 from "@/assets/evento3.png";
+import evento4 from "@/assets/evento4.png";
+import evento5 from "@/assets/evento5.png";
+import evento6 from "@/assets/evento6.png";
+import evento7 from "@/assets/evento7.png";
+import evento8 from "@/assets/evento8.png";
 
 const logos = [
-  { src: evento1.url, alt: "UCI Mountain Bike World Series Araxá" },
-  { src: evento2.url, alt: "Copa Internacional de Mountain Bike" },
-  { src: evento3.url, alt: "Arraiá da APAE" },
-  { src: evento4.url, alt: "MD Clinic Sports On" },
-  { src: evento5.url, alt: "Forrest Run" },
-  { src: evento6.url, alt: "Bocaina Park Trail" },
-  { src: evento7.url, alt: "Festa do Branco" },
-  { src: evento8.url, alt: "Festa Junina da Equoterapia" },
+  { src: evento1, alt: "UCI Mountain Bike World Series Araxá" },
+  { src: evento2, alt: "Copa Internacional de Mountain Bike" },
+  { src: evento3, alt: "Arraiá da APAE" },
+  { src: evento4, alt: "MD Clinic Sports On" },
+  { src: evento5, alt: "Forrest Run" },
+  { src: evento6, alt: "Bocaina Park Trail" },
+  { src: evento7, alt: "Festa do Branco" },
+  { src: evento8, alt: "Festa Junina da Equoterapia" },
 ];
+
 
 const EventLogosSection = () => {
   return (
