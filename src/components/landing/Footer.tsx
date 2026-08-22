@@ -1,23 +1,58 @@
 import logo from "@/assets/Logo_PAGE_Eventos_branca_v4.png";
 import { Instagram, MessageCircle, Mail, MapPin, Heart } from "lucide-react";
 import { trackWhatsappClick } from "@/lib/tracking";
+import { scrollToSection } from "@/lib/scroll";
 
-const footerLinks = {
-  about: [
-    { label: "Como Funciona", href: "#como-funciona" },
-    { label: "Cases", href: "#cases" },
-    { label: "Sobre Nós", href: "#" },
-    { label: "Contato", href: "#" },
-  ],
-  events: [
-    { label: "Criar Evento", href: "#" },
-    { label: "Meus Ingressos", href: "#" },
-    { label: "Central de Ajuda", href: "#" },
-    { label: "Blog", href: "#" },
-  ],
-};
+type FooterLink =
+  | { label: string; kind: "scroll"; section: string }
+  | { label: string; kind: "external"; href: string };
+
+const aboutLinks: FooterLink[] = [
+  { label: "Como Funciona", kind: "scroll", section: "como-funciona" },
+  { label: "Cases", kind: "scroll", section: "cases" },
+  { label: "Sobre Nós", kind: "scroll", section: "como-funciona" },
+  { label: "Contato", kind: "scroll", section: "contato" },
+];
+
+const eventLinks: FooterLink[] = [
+  { label: "Criar Evento", kind: "scroll", section: "contato" },
+  { label: "Meus Ingressos", kind: "external", href: "https://pageeventos.com.br/meus-ingressos" },
+  { label: "Central de Ajuda", kind: "external", href: "https://pageeventos.com.br/faq" },
+];
+
+const legalLinks = [
+  { label: "Política de Privacidade", href: "https://pageeventos.com.br/docs/politica-de-privacidade.pdf" },
+  { label: "Termos de Uso", href: "https://pageeventos.com.br/docs/termos-de-uso-pageeventos.pdf" },
+];
 
 const Footer = () => {
+  const renderLink = (link: FooterLink) => {
+    if (link.kind === "scroll") {
+      return (
+        <a
+          href={`#${link.section}`}
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection(link.section);
+          }}
+          className="text-muted-foreground hover:text-primary transition-colors"
+        >
+          {link.label}
+        </a>
+      );
+    }
+    return (
+      <a
+        href={link.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-muted-foreground hover:text-primary transition-colors"
+      >
+        {link.label}
+      </a>
+    );
+  };
+
   return (
     <footer className="bg-page-black pt-16 pb-8">
       <div className="container-custom">
@@ -34,15 +69,8 @@ const Footer = () => {
           <div>
             <h4 className="text-foreground font-bold mb-4">Links</h4>
             <ul className="space-y-2">
-              {footerLinks.about.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
+              {aboutLinks.map((link, index) => (
+                <li key={index}>{renderLink(link)}</li>
               ))}
             </ul>
           </div>
@@ -51,15 +79,8 @@ const Footer = () => {
           <div>
             <h4 className="text-foreground font-bold mb-4">Eventos</h4>
             <ul className="space-y-2">
-              {footerLinks.events.map((link, index) => (
-                <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </a>
-                </li>
+              {eventLinks.map((link, index) => (
+                <li key={index}>{renderLink(link)}</li>
               ))}
             </ul>
           </div>
@@ -93,10 +114,23 @@ const Footer = () => {
         </div>
 
         {/* Bottom */}
-        <div className="border-t border-border/30 pt-8 text-center">
+        <div className="border-t border-border/30 pt-8 flex flex-col items-center gap-4">
           <p className="text-muted-foreground inline-flex items-center gap-1 flex-wrap justify-center">
             © 2025 Page Eventos. Feito com <Heart className="w-4 h-4 text-primary fill-primary" /> em Araxá, Minas Gerais
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+            {legalLinks.map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-primary transition-colors"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
