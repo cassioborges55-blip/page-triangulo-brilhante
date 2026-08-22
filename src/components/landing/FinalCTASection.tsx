@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Calculator, MessageCircle, Check } from "lucide-react";
-import { trackWhatsappClick, trackCtaClick } from "@/lib/tracking";
+import { trackWhatsappClick, trackCtaClick, buildWhatsappUrl } from "@/lib/tracking";
 import { scrollToSection } from "@/lib/scroll";
 
 const benefits = [
