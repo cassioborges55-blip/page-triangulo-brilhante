@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Calendar } from "lucide-react";
 import { trackCtaClick } from "@/lib/tracking";
@@ -7,7 +7,6 @@ import { scrollToSection } from "@/lib/scroll";
 const MobileFloatingCTA = () => {
   const [scrolled, setScrolled] = useState(false);
   const [formVisible, setFormVisible] = useState(false);
-  const footerVisible = useRef(false);
   const [footerInView, setFooterInView] = useState(false);
 
   useEffect(() => {
@@ -32,10 +31,7 @@ const MobileFloatingCTA = () => {
     }
     if (footer) {
       const io = new IntersectionObserver(
-        ([entry]) => {
-          footerVisible.current = entry.isIntersecting;
-          setFooterInView(entry.isIntersecting);
-        },
+        ([entry]) => setFooterInView(entry.isIntersecting),
         { threshold: 0 }
       );
       io.observe(footer);

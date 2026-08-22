@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Calculator, MessageCircle, Check } from "lucide-react";
-import { trackWhatsappClick } from "@/lib/tracking";
+import { trackWhatsappClick, trackCtaClick } from "@/lib/tracking";
+import { scrollToSection } from "@/lib/scroll";
 
 const benefits = [
   "Zero estresse operacional",
@@ -43,9 +44,16 @@ const FinalCTASection = () => {
             <Button
               size="lg"
               asChild
-              className="bg-primary-foreground text-primary hover:bg-primary-foreground/90 text-lg px-8 py-6 rounded-xl shadow-lg btn-scale"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-8 py-6 rounded-xl shadow-lg btn-scale"
             >
-              <a href="https://pageeventos.com.br/" target="_blank" rel="noopener noreferrer">
+              <a
+                href="#contato"
+                onClick={(e) => {
+                  e.preventDefault();
+                  trackCtaClick("final_cta_crie_seu_evento");
+                  scrollToSection("contato");
+                }}
+              >
                 <Calendar className="mr-2 h-5 w-5" />
                 Crie seu evento agora
               </a>
@@ -53,7 +61,7 @@ const FinalCTASection = () => {
             <Button
               size="lg"
               asChild
-              className="bg-[#25D366] text-white hover:bg-[#20BD5A] text-lg px-8 py-6 rounded-xl shadow-lg btn-scale"
+              className="bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground text-lg px-8 py-6 rounded-xl shadow-lg btn-scale"
             >
               <a href="https://wa.me/5534998093337" target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsappClick("final_cta")}>
                 <MessageCircle className="mr-2 h-5 w-5" />
