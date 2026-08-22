@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { MessageCircle, Loader2 } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
+import { trackLeadSubmit, trackWhatsappClick } from "@/lib/tracking";
 const eventTypes = [
   "Show/Festa",
   "Evento Esportivo",
@@ -51,10 +52,16 @@ const ContactFormSection = () => {
       event_type: eventType,
       audience,
     }).then(({ error }) => {
-      if (error) console.error("Erro ao salvar lead:", error);
+      if (error) {
+        console.error("Erro ao salvar lead:", error);
+        return;
+      }
+      // Only on successful persistence, fire conversion tracking once.
+      trackLeadSubmit({ tipoEvento: eventType, publico: audience });
     });
 
     // Always open WhatsApp
+    trackWhatsappClick("formulario");
     const message = encodeURIComponent(
       `Olá! Sou ${name.trim()}.\nTipo de evento: ${eventType}\nPúblico estimado: ${audience}\nMeu WhatsApp: ${whatsapp}`
     );

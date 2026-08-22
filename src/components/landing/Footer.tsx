@@ -1,5 +1,6 @@
 import logo from "@/assets/Logo_PAGE_Eventos_branca_v4.png";
 import { Instagram, MessageCircle, Mail, MapPin, Heart } from "lucide-react";
+import { trackWhatsappClick } from "@/lib/tracking";
 
 const footerLinks = {
   about: [
@@ -69,7 +70,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-muted-foreground">
                 <MessageCircle className="w-4 h-4 text-primary" />
-                <a href="https://wa.me/5534998093337" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                <a href="https://wa.me/5534998093337" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors" onClick={() => trackWhatsappClick("rodape")}>
                   (34) 99809-3337
                 </a>
               </li>
