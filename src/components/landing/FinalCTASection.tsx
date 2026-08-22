@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, Calculator, MessageCircle, Check } from "lucide-react";
+import { trackWhatsappClick } from "@/lib/tracking";
 
 const benefits = [
   "Zero estresse operacional",
