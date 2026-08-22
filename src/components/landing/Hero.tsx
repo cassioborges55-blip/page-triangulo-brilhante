@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, MessageCircle } from "lucide-react";
 import logo from "@/assets/page-eventos-logo.png";
-import phoneScreen from "@/assets/phone-screen.png";
+import phoneScreen from "@/assets/phone-screen-nova.png";
 import { trackWhatsappClick, trackCtaClick, buildWhatsappUrl } from "@/lib/tracking";
 import { scrollToSection } from "@/lib/scroll";
 
@@ -51,7 +51,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 asChild
-                className="bg-card text-foreground hover:bg-card/90 text-lg px-8 py-6 rounded-xl shadow-button btn-scale"
+                className="bg-page-black text-white hover:bg-page-black/80 text-lg px-8 py-6 rounded-xl shadow-button btn-scale"
               >
                 <a
                   href="#contato"
@@ -68,7 +68,7 @@ const Hero = () => {
               <Button
                 size="lg"
                 asChild
-                className="bg-[#25D366] text-white hover:bg-[#20BD5A] text-lg px-8 py-6 rounded-xl shadow-button btn-scale animate-pulse-soft"
+                className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-page-black text-lg px-8 py-6 rounded-xl btn-scale"
               >
                 <a href={buildWhatsappUrl()} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsappClick("hero")}>
                   <MessageCircle className="mr-2 h-5 w-5" />
@@ -82,13 +82,13 @@ const Hero = () => {
           <div className="hidden lg:flex justify-center items-center animate-fade-in" style={{ animationDelay: '0.3s' }}>
             <div className="relative">
               {/* Phone mockup */}
-              <div className="relative w-72 h-[580px] bg-page-black rounded-[3rem] border-4 border-page-gray-light shadow-2xl overflow-hidden animate-float">
+              <div className="relative w-72 h-[624px] bg-page-black rounded-[3rem] border-4 border-page-gray-light shadow-2xl overflow-hidden animate-float">
                 {/* Phone notch */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-7 bg-page-black rounded-b-2xl z-10" />
-                
+
                 {/* Screen content */}
                 <div className="absolute inset-2 rounded-[2.5rem] overflow-hidden">
-                  <img src={phoneScreen} alt="Page Eventos App" className="w-full h-full object-cover" />
+                  <img src={phoneScreen} alt="Page Eventos App" className="w-full h-full object-cover object-center" />
                 </div>
               </div>
               
