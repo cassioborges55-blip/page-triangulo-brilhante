@@ -13,7 +13,7 @@ const benefits = [
 
 const FinalCTASection = () => {
   return (
-    <section className="section-padding gradient-cta relative overflow-hidden">
+    <section className="section-padding relative overflow-hidden bg-[linear-gradient(135deg,hsl(0_0%_10%)_0%,hsl(152_82%_14%)_100%)]">
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-20">
         <div className="absolute top-0 left-0 w-96 h-96 bg-foreground/10 rounded-full blur-3xl" />
@@ -23,7 +23,7 @@ const FinalCTASection = () => {
       <div className="container-custom relative z-10">
         <div className="max-w-4xl mx-auto text-center">
           {/* Header */}
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-primary-foreground mb-8 animate-fade-up">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-8 animate-fade-up">
             Pronto para transformar seu próximo evento?
           </h2>
 
@@ -31,10 +31,10 @@ const FinalCTASection = () => {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-10 animate-fade-up" style={{ animationDelay: '0.1s' }}>
             {benefits.map((benefit, index) => (
               <div key={index} className="flex items-center gap-3 justify-center sm:justify-start">
-                <div className="w-6 h-6 bg-primary-foreground/20 rounded-full flex items-center justify-center">
-                  <Check className="w-4 h-4 text-primary-foreground" />
+                <div className="w-6 h-6 bg-primary/20 rounded-full flex items-center justify-center">
+                  <Check className="w-4 h-4 text-primary" />
                 </div>
-                <span className="text-primary-foreground/90 font-medium">{benefit}</span>
+                <span className="text-foreground/90 font-medium">{benefit}</span>
               </div>
             ))}
           </div>
