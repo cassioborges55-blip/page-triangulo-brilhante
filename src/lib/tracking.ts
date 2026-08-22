@@ -32,3 +32,10 @@ export function trackLeadSubmit(params: {
 export function trackWhatsappClick(local: string) {
   push({ event: "whatsapp_click", local });
 }
+
+/**
+ * Fire when a generic CTA (non-WhatsApp) is clicked.
+ */
+export function trackCtaClick(local: string) {
+  push({ event: "cta_click", local });
+}

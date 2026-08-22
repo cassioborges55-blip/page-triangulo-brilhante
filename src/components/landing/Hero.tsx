@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Calendar, MapPin, MessageCircle } from "lucide-react";
 import logo from "@/assets/page-eventos-logo.png";
 import phoneScreen from "@/assets/phone-screen.png";
-import { trackWhatsappClick } from "@/lib/tracking";
+import { trackWhatsappClick, trackCtaClick } from "@/lib/tracking";
+import { scrollToSection } from "@/lib/scroll";
 
 const Hero = () => {
   return (
@@ -52,7 +53,14 @@ const Hero = () => {
                 asChild
                 className="bg-card text-foreground hover:bg-card/90 text-lg px-8 py-6 rounded-xl shadow-button btn-scale"
               >
-                <a href="https://pageeventos.com.br/" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="#contato"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    trackCtaClick("hero_crie_seu_evento");
+                    scrollToSection("contato");
+                  }}
+                >
                   <Calendar className="mr-2 h-5 w-5" />
                   Crie seu evento agora
                 </a>

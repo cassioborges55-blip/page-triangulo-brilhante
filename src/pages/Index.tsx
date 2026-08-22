@@ -11,6 +11,7 @@ import RegionSection from "@/components/landing/RegionSection";
 import ContactFormSection from "@/components/landing/ContactFormSection";
 import FinalCTASection from "@/components/landing/FinalCTASection";
 import Footer from "@/components/landing/Footer";
+import MobileFloatingCTA from "@/components/landing/MobileFloatingCTA";
 
 const Index = () => {
   return (
@@ -31,6 +32,7 @@ const Index = () => {
         <FinalCTASection />
       </main>
       <Footer />
+      <MobileFloatingCTA />
     </div>
   );
 };
