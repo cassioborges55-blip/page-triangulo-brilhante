@@ -22,7 +22,7 @@ const solutions = [
   {
     icon: HeartHandshake,
     title: "Suporte Personalizado",
-    description: "Nossa equipe VAI AO SEU EVENTO. Sempre que precisar, estamos lá.",
+    description: "Nossa equipe vai ao seu evento. Sempre que precisar, estamos lá.",
     features: ["Suporte presencial", "WhatsApp direto", "Somos de Araxá"],
   },
   {
