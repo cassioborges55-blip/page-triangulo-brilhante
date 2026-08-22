@@ -1,15 +1,21 @@
 import { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, MessageCircle } from "lucide-react";
 import logo from "@/assets/Logo_PAGE_Eventos_branca_v4.png";
+import { scrollToSection } from "@/lib/scroll";
+import { trackCtaClick } from "@/lib/tracking";
 
 const navLinks = [
   { label: "Soluções", href: "#solucoes" },
   { label: "Cases", href: "#cases" },
   { label: "Como Funciona", href: "#como-funciona" },
-  
+
   { label: "Região", href: "#regiao" },
 ];
+
+const handleCtaClick = () => {
+  trackCtaClick("navbar");
+  scrollToSection("contato");
+};
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,8 +40,14 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <button
+              onClick={handleCtaClick}
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-5 py-2.5 rounded-xl transition-colors"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Falar com a equipe
+            </button>
           </div>
-
 
           {/* Mobile Menu Button */}
           <button
@@ -61,6 +73,16 @@ const Navbar = () => {
                 {link.label}
               </a>
             ))}
+            <button
+              onClick={() => {
+                setIsOpen(false);
+                handleCtaClick();
+              }}
+              className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 font-semibold px-5 py-3 rounded-xl transition-colors"
+            >
+              <MessageCircle className="w-4 h-4" />
+              Falar com a equipe
+            </button>
           </div>
         </div>
       )}

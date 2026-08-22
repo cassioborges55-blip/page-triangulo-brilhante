@@ -116,7 +116,7 @@ const Footer = () => {
         {/* Bottom */}
         <div className="border-t border-border/30 pt-8 flex flex-col items-center gap-4">
           <p className="text-muted-foreground inline-flex items-center gap-1 flex-wrap justify-center">
-            © 2025 Page Eventos. Feito com <Heart className="w-4 h-4 text-primary fill-primary" /> em Araxá, Minas Gerais
+            © {new Date().getFullYear()} Page Eventos. Feito com <Heart className="w-4 h-4 text-primary fill-primary" /> em Araxá, Minas Gerais
           </p>
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
             {legalLinks.map((link, index) => (
