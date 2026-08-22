@@ -1,6 +1,7 @@
 import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
 import CredibilityBadges from "@/components/landing/CredibilityBadges";
+import EventLogosSection from "@/components/landing/EventLogosSection";
 import ProblemsSection from "@/components/landing/ProblemsSection";
 import SolutionsSection from "@/components/landing/SolutionsSection";
 import ComparisonSection from "@/components/landing/ComparisonSection";
@@ -20,6 +21,7 @@ const Index = () => {
       <main>
         <Hero />
         <CredibilityBadges />
+        <EventLogosSection />
         <ProblemsSection />
         <SolutionsSection />
         <ComparisonSection />
